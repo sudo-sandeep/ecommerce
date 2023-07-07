@@ -2,6 +2,7 @@ import { auth } from "@clerk/nextjs";
 import React from "react";
 import { redirect } from "next/navigation";
 import prismadb from "@/lib/prismadb";
+import Navbar from "@/components/navbar";
 
 type Props = {
   children: React.ReactNode;
@@ -23,7 +24,7 @@ const DashboardLayout = async ({ children, params: { storeId } }: Props) => {
   }
   return (
     <div>
-      <p>This is a navbar</p>
+      <Navbar />
       {children}
     </div>
   );
